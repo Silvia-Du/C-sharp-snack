@@ -163,7 +163,7 @@ for(int i = 0; i < numbers.Length; i++)
     }
 }
 
-Console.WriteLine(sum);
+Console.WriteLine($"La somma dei numeri nelle posizioni dispari è {sum}");
 
 
 
