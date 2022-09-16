@@ -92,17 +92,42 @@ using System;
 //5- chiedo all'utente di inserire un numero se è pari lo stampo , se no stampo il numero successivo
 
 
-Console.WriteLine("Inserisci un numero");
-int userNumber = Convert.ToInt32(Console.ReadLine());
-if( userNumber % 2 == 0)
-{
-    Console.WriteLine($"Ecco il tuo numero perchè è pari: {userNumber}");
-}
-else
-{
-    Console.WriteLine($"Ecco il numero successivo perchè il tuo numero è dispari: {userNumber +1}");
+//Console.WriteLine("Inserisci un numero");
+//int userNumber = Convert.ToInt32(Console.ReadLine());
+//if( userNumber % 2 == 0)
+//{
+//    Console.WriteLine($"Ecco il tuo numero perchè è pari: {userNumber}");
+//}
+//else
+//{
+//    Console.WriteLine($"Ecco il numero successivo perchè il tuo numero è dispari: {userNumber +1}");
 
+//}
+
+
+//6- Nell'array ci sono gli invitati di Gatsby, se il nome dell'utente è presente e dai feedback di accesso
+Console.WriteLine("La festa di Gatsby è gia iniziata! sei inviatat@?");
+
+string[] vipList = { "silvia", "manuel", "sebastiano", "paolo", "francesco" };
+
+    Console.WriteLine("Inserisci il tuo nome, verifico che tu sia nella lista degli invitati");
+    string userName = Console.ReadLine().ToLower();
+
+
+for (int i = 0; i < vipList.Length; i++)
+{
+    if (userName.Equals(vipList[i]))
+    {
+        Console.WriteLine($"Benvenut@ alla festa {userName}");
+
+    }
+    else
+    {
+        Console.WriteLine($"Mi dispiace {userName}, non posso farti entrare, torna quando sarai ivitato!");
+
+    }
 }
+
 
 
 
