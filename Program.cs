@@ -151,19 +151,39 @@ using System;
 
 //8- creao un'array di numeri interi, sommo i numeri nelle posizioni dispari
 
-int[] numbers = { 5, 21, 4, 3, 1, 8, 6, 9 };
+//int[] numbers = { 5, 21, 4, 3, 1, 8, 6, 9 };
 
+//int sum = default;
+
+//for(int i = 0; i < numbers.Length; i++)
+//{
+//    if(i % 2 != 0)
+//    {
+//        sum = numbers[i] + sum;
+//    }
+//}
+
+//Console.WriteLine($"La somma dei numeri nelle posizioni dispari è {sum}");
+
+
+//9- creo un'array vuoto e chiedo un numero all'utente, finche la somma dei numeri inseriti è minore di 50
+
+int[] numbers = new int[50];
 int sum = default;
+int position = default;
 
-for(int i = 0; i < numbers.Length; i++)
+while(sum < 50)
 {
-    if(i % 2 != 0)
-    {
-        sum = numbers[i] + sum;
-    }
+    Console.WriteLine("inserisci un numero");
+    int userNumber = Convert.ToInt32(Console.ReadLine());
+    numbers[position] = userNumber;
+    position = 1 + position;
+    sum = userNumber + sum;
 }
 
-Console.WriteLine($"La somma dei numeri nelle posizioni dispari è {sum}");
+
+
+
 
 
 
