@@ -131,22 +131,39 @@ using System;
 
 //7- creo un'array vuoto, chiedo per sei volte all'utente di inserire un numero, se è dispari lo inserisco nell'array
 
-int[] evenNumbers = new int[6];
-Console.WriteLine("Ti chiederò per 6 volte di inserire un numero");
+//int[] evenNumbers = new int[6];
+//Console.WriteLine("Ti chiederò per 6 volte di inserire un numero");
 
-for (int i = 0; i < 6; i++)
-{
-    Console.WriteLine($"Inserisci il {i+1}' numero");
-    int userNumber = Convert.ToInt32(Console.ReadLine());
-    if (userNumber % 2 != 0)
-    {
-        evenNumbers[i] = userNumber;
+//for (int i = 0; i < 6; i++)
+//{
+//    Console.WriteLine($"Inserisci il {i+1}' numero");
+//    int userNumber = Convert.ToInt32(Console.ReadLine());
+//    if (userNumber % 2 != 0)
+//    {
+//        evenNumbers[i] = userNumber;
 
-    }
-    Console.WriteLine(evenNumbers[i]);
-}
+//    }
+//    Console.WriteLine(evenNumbers[i]);
+//}
 
 //avrei preferito una soluzione in cui la lunghezza dell'array è determinata dalla quantità dei numeri dispari dell'utente
+
+
+//8- creao un'array di numeri interi, sommo i numeri nelle posizioni dispari
+
+int[] numbers = { 5, 21, 4, 3, 1, 8, 6, 9 };
+
+int sum = default;
+
+for(int i = 0; i < numbers.Length; i++)
+{
+    if(i % 2 != 0)
+    {
+        sum = numbers[i] + sum;
+    }
+}
+
+Console.WriteLine(sum);
 
 
 
