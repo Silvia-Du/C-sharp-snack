@@ -168,17 +168,26 @@ using System;
 
 //9- creo un'array vuoto e chiedo un numero all'utente, finche la somma dei numeri inseriti è minore di 50
 
-int[] numbers = new int[50];
-int sum = default;
-int position = default;
 
-while(sum < 50)
+
+//10- chiedo all'utente di inserire un numero n , genero n array ogniuno formato da 10 numeri casuali tra 1 e 100, quando lo creo lo stampo
+
+
+Console.WriteLine("Inserisci un numero");
+int arrayNumber = Convert.ToInt32(Console.ReadLine());
+Random rand = new Random();
+
+for(int i = 0; i < arrayNumber; i++)
 {
-    Console.WriteLine("inserisci un numero");
-    int userNumber = Convert.ToInt32(Console.ReadLine());
-    numbers[position] = userNumber;
-    position = 1 + position;
-    sum = userNumber + sum;
+    int[] newArray = new int[10];
+    Console.WriteLine($"Array {i+1}:");
+    for (int k = 0; k < newArray.Length; k++)
+    {
+        newArray[k] = rand.Next(1, 100);
+        Console.Write(newArray[k] + "-");
+
+    }
+
 }
 
 
