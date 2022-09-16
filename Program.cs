@@ -5,25 +5,25 @@ using System;
 
 //int limit = 2;
 //int[] numbers = new int[2];
-//int num1;
+//int userNumber;
 //int num2;
 
-
-//    Console.WriteLine("inserisci il primo numero");
-//    int userNumber1 = Convert.ToInt32(Console.ReadLine());
-//    num1 = userNumber1;
-
-//    Console.WriteLine("inserisci il secondo numero");
-//    int userNumber2 = Convert.ToInt32(Console.ReadLine());
-//    num2 = userNumber2;
-
-//if (num1 > num2)
+//for(int i = 0; i < numbers.Length; i++)
 //{
-//    Console.WriteLine($"il primo numero({num1}) è maggiore");
 
-//}else if(num2 > num1)
+//    Console.WriteLine($"inserisci il {i+1}' numero");
+//    userNumber = Convert.ToInt32(Console.ReadLine());
+//    numbers[i] = userNumber;
+//}
+
+//if (numbers[0] > numbers[1])
 //{
-//    Console.WriteLine($"il secondo numero ({num2}) è maggiore");
+//    Console.WriteLine($"il primo numero({numbers[0]}) è maggiore");
+
+//}
+//else if (numbers[1] > numbers[0])
+//{
+//    Console.WriteLine($"il secondo numero ({numbers[1]}) è maggiore");
 //}
 //else
 //{
@@ -76,7 +76,7 @@ using System;
 
 //int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 //int sum = default;
-//int numAverage = default;
+//float numAverage = default;
 
 //for (int i = 0; i < numbers.Length; i++)
 //{
@@ -106,27 +106,34 @@ using System;
 
 
 //6- Nell'array ci sono gli invitati di Gatsby, se il nome dell'utente è presente e dai feedback di accesso
-//Console.WriteLine("La festa di Gatsby è gia iniziata! sei inviatat@?");
+Console.WriteLine("La festa di Gatsby è gia iniziata! sei inviatat@?");
 
-//string[] vipList = { "silvia", "manuel", "sebastiano", "paolo", "francesco" };
+string[] vipList = { "silvia", "manuel", "sebastiano", "paolo", "francesco" };
 
-//    Console.WriteLine("Inserisci il tuo nome, verifico che tu sia nella lista degli invitati");
-//    string userName = Console.ReadLine().ToLower();
+Console.WriteLine("Inserisci il tuo nome, verifico che tu sia nella lista degli invitati");
+string userName = Console.ReadLine().ToLower();
+bool isInvited = false;
 
+for (int i = 0; i < vipList.Length; i++)
+{
+    if (userName.Equals(vipList[i]))
+    {
+        Console.WriteLine($"Benvenut@ alla festa {userName}");
+        isInvited = true;
+        break;
 
-//for (int i = 0; i < vipList.Length; i++)
-//{
-//    if (userName.Equals(vipList[i]))
-//    {
-//        Console.WriteLine($"Benvenut@ alla festa {userName}");
+    }
+    else
+    {
+        Console.WriteLine($"Mi dispiace {userName}, non posso farti entrare, torna quando sarai ivitato!");
 
-//    }
-//    else
-//    {
-//        Console.WriteLine($"Mi dispiace {userName}, non posso farti entrare, torna quando sarai ivitato!");
+    }
+}
 
-//    }
-//}
+if (isInvited)
+{
+
+}
 
 
 //7- creo un'array vuoto, chiedo per sei volte all'utente di inserire un numero, se è dispari lo inserisco nell'array
@@ -169,6 +176,30 @@ using System;
 //9- creo un'array vuoto e chiedo un numero all'utente, finche la somma dei numeri inseriti è minore di 50
 
 
+int[] numbers = new int[50];
+int sum = default;
+int position = default;
+
+for (int i = 0; i < numbers.Length; i++)
+    while (sum < 50)
+    {
+        if (i % 2 != 0)
+        {
+            sum += numbers[i];
+        }
+        Console.WriteLine("inserisci un numero");
+        int userNumber = Convert.ToInt32(Console.ReadLine());
+        if(userNumber != 0)
+        {
+
+            numbers[position] = userNumber;
+            position ++;
+            sum += userNumber;
+        }
+    }
+
+
+
 
 //10- chiedo all'utente di inserire un numero n , genero n array ogniuno formato da 10 numeri casuali tra 1 e 100, quando lo creo lo stampo
 
@@ -189,6 +220,9 @@ for(int i = 0; i < arrayNumber; i++)
     }
 
 }
+
+//random posso anche crearlo nel ciclo e darlo subito all'elemento
+// tipo: newArray[k] = new Random().next(1,100);
 
 
 
