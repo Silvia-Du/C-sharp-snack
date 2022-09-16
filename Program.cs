@@ -33,29 +33,47 @@ using System;
 
 //2-L'utente inserisce due parole in successione, il software scrive prima quella piu corta e poi quella piu lunga
 
-string[] words = new string[2];
-Console.WriteLine($"ti chiederò di inserire due parole");
+//string[] words = new string[2];
+//Console.WriteLine($"ti chiederò di inserire due parole");
 
-for (int i=0; i< words.Length; i++)
+//for (int i=0; i< words.Length; i++)
+//{
+//    Console.WriteLine($"scrivi la {i+1}' parola");
+//    words[i]= Console.ReadLine();
+
+//}
+
+//if(words[0].Length > words[1].Length)
+//{
+//    Console.WriteLine($"la parola piu corta: {words[1]}");
+//    Console.WriteLine($"la parola piu lunga: {words[0]}");
+//}else if(words[1].Length > words[0].Length)
+//{
+//    Console.WriteLine($"la parola piu corta: {words[0]}");
+//    Console.WriteLine($"la parola piu lunga: {words[1]}");
+//}
+//else
+//{
+//    Console.WriteLine($"le due parole sono lunghe uguali");
+//}
+
+//3- Chiedre 10 volte all'utente di inserire un numero, il software stampa la somma dei 10 numeri
+
+Console.WriteLine($"Ti chiederò di inserire dieci numeri");
+int total = 0;
+
+for (int i = 0; i < 10; i++)
 {
-    Console.WriteLine($"scrivi la {i+1}' parola");
-    words[i]= Console.ReadLine();
+    Console.WriteLine($"inserisci il {i+1}' numero");
+    int userNum = Convert.ToInt32(Console.ReadLine());
+    total =  userNum + total;
 
 }
 
-if(words[0].Length > words[1].Length)
-{
-    Console.WriteLine($"la parola piu corta: {words[1]}");
-    Console.WriteLine($"la parola piu lunga: {words[0]}");
-}else if(words[1].Length > words[0].Length)
-{
-    Console.WriteLine($"la parola piu corta: {words[0]}");
-    Console.WriteLine($"la parola piu lunga: {words[1]}");
-}
-else
-{
-    Console.WriteLine($"le due parole sono lunghe uguali");
-}
+Console.WriteLine($"La somma dei tuoi numeri è {total}");
+
+//4- calcola la somma e la media dei numeri da 2 a 10
+
 
 
 
