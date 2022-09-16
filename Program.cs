@@ -106,28 +106,45 @@ using System;
 
 
 //6- Nell'array ci sono gli invitati di Gatsby, se il nome dell'utente è presente e dai feedback di accesso
-Console.WriteLine("La festa di Gatsby è gia iniziata! sei inviatat@?");
+//Console.WriteLine("La festa di Gatsby è gia iniziata! sei inviatat@?");
 
-string[] vipList = { "silvia", "manuel", "sebastiano", "paolo", "francesco" };
+//string[] vipList = { "silvia", "manuel", "sebastiano", "paolo", "francesco" };
 
-    Console.WriteLine("Inserisci il tuo nome, verifico che tu sia nella lista degli invitati");
-    string userName = Console.ReadLine().ToLower();
+//    Console.WriteLine("Inserisci il tuo nome, verifico che tu sia nella lista degli invitati");
+//    string userName = Console.ReadLine().ToLower();
 
 
-for (int i = 0; i < vipList.Length; i++)
+//for (int i = 0; i < vipList.Length; i++)
+//{
+//    if (userName.Equals(vipList[i]))
+//    {
+//        Console.WriteLine($"Benvenut@ alla festa {userName}");
+
+//    }
+//    else
+//    {
+//        Console.WriteLine($"Mi dispiace {userName}, non posso farti entrare, torna quando sarai ivitato!");
+
+//    }
+//}
+
+
+//7- creo un'array vuoto, chiedo per sei volte all'utente di inserire un numero, se è dispari lo inserisco nell'array
+
+int[] evenNumbers = new int[6];
+Console.WriteLine("Ti chiederò per 6 volte di inserire un numero");
+
+for (int i = 0; i < 6; i++)
 {
-    if (userName.Equals(vipList[i]))
+    Console.WriteLine($"Inserisci il {i+1}' numero");
+    int userNumber = Convert.ToInt32(Console.ReadLine());
+    if (userNumber % 2 != 0)
     {
-        Console.WriteLine($"Benvenut@ alla festa {userName}");
+        evenNumbers[i] = userNumber;
 
     }
-    else
-    {
-        Console.WriteLine($"Mi dispiace {userName}, non posso farti entrare, torna quando sarai ivitato!");
-
-    }
+    Console.WriteLine(evenNumbers[i]);
 }
-
 
 
 
