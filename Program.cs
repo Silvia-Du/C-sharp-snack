@@ -74,20 +74,35 @@ using System;
 
 //4- calcola la somma e la media dei numeri da 2 a 10
 
-int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-int sum = default;
-int numAverage = default;
+//int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//int sum = default;
+//int numAverage = default;
 
-for (int i = 0; i < numbers.Length; i++)
+//for (int i = 0; i < numbers.Length; i++)
+//{
+//    sum = numbers[i] + sum;
+
+//}
+
+//numAverage = sum / numbers.Length;
+
+//Console.WriteLine($"la somma dei numeri da 2 a 10 è {sum}");
+//Console.WriteLine($"la media dei numeri da 2 a 10 è {numAverage}");
+
+//5- chiedo all'utente di inserire un numero se è pari lo stampo , se no stampo il numero successivo
+
+
+Console.WriteLine("Inserisci un numero");
+int userNumber = Convert.ToInt32(Console.ReadLine());
+if( userNumber % 2 == 0)
 {
-    sum = numbers[i] + sum;
+    Console.WriteLine($"Ecco il tuo numero perchè è pari: {userNumber}");
+}
+else
+{
+    Console.WriteLine($"Ecco il numero successivo perchè il tuo numero è dispari: {userNumber +1}");
 
 }
-
-numAverage = sum / numbers.Length;
-
-Console.WriteLine($"la somma dei numeri da 2 a 10 è {sum}");
-Console.WriteLine($"la media dei numeri da 2 a 10 è {numAverage}");
 
 
 
