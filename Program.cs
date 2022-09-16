@@ -146,6 +146,8 @@ for (int i = 0; i < 6; i++)
     Console.WriteLine(evenNumbers[i]);
 }
 
+//avrei preferito una soluzione in cui la lunghezza dell'array è determinata dalla quantità dei numeri dispari dell'utente
+
 
 
 
